@@ -2,6 +2,10 @@ require 'sinatra/base'
 require 'honeybadger'
 
 class MyApp < Sinatra::Application
+  error do |err|
+    'Sorry, something went wrong.'
+  end
+
   get '/' do
     'You may be looking to /fail'
   end
